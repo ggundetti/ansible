@@ -1,5 +1,5 @@
 - name: playbook1
-  host: nginx
+  host: 172.31.18.188
   task:
   - name: play1 and taks1
     ansible.builtin.debug:
@@ -8,7 +8,7 @@
     ansible.builtin.debug:
     msg: "Hello India"
 - name: playbook2
-  host: nginx
+  host: 172.31.18.188
   task:
   - name: play2 and taks1
     ansible.builtin.debug:
