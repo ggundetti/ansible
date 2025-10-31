@@ -1,0 +1,21 @@
+- name: playbook1
+  host: nginx
+  task:
+  - name: play1 and taks1
+    ansible.builtin.debug:
+      msg: "Hollo world"
+  - name: play1 and task2
+    ansible.builtin.debug:
+    msg: "Hello India"
+- name: playbook2
+  host: nginx
+  task:
+  - name: play2 and taks1
+    ansible.builtin.debug:
+    msg: "hellow Gopi"
+  - name: play2 and task2
+    ansible.builtin.debug:
+    msg: "hellow Kavya"  
+
+
+  
