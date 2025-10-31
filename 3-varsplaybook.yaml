@@ -6,9 +6,9 @@
     duration: 5months
     trainer: Siva
   tasks:
-   - name: print the course info
-     ansible.builtin.debug:
-     msg: "Course is: {{ course }}, {{ duration }}, {{ trainer }} "
+  - name: print the course info
+    ansible.builtin.debug:
+    msg: "Course is: {{ course }}, {{ duration }}, {{ trainer }} "
 
  
   
