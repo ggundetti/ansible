@@ -1,0 +1,12 @@
+- name: loops with playbook
+  hosts: local
+  connection: local
+  tasks:
+  - name: looping name
+    ansible.builtin.debug:
+      msg: " dengey ra {{ item }} "
+    loop:
+    - Madhu
+    - Venu
+    - Chintu
+    - Raju
