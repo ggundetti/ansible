@@ -1,6 +1,6 @@
 - name: error handling
   hosts: local
-  connections: local
+  connection: local
   become: yes
   tasks:
   - name: check user id or not
