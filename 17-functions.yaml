@@ -1,9 +1,11 @@
 - name: functions
   hosts: local
   connection: local
-  tags:
-    application: payment
-    environment: prod 
+  vars:
+    tags:
+      application: payment
+      environment: prod 
+
   tasks:
   - name: dictionary functions
     ansible.builtin.debug:
