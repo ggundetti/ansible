@@ -1,0 +1,7 @@
+- name: function playbook
+  hosts: local
+  connection: local
+  tasks:
+  - name: print function
+    ansible.builtin.debug:
+      msg: "Hellow {{ name | default ("Ramesh")}}"
