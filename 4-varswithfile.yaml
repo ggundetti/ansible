@@ -1,9 +1,11 @@
-- name: variables with file
-  hosts: local
+- name: play with variable
+  host: local
   connection: local
-  vars_files:
-  - course.yaml
+  vars:
+    course: DevOps
+    duration: 6months
+    trainer: sivareddy
   tasks:
-  - name: print course info
-    ansible.builtin.debug:
-      msg: "The course is: {{ Course }}, {{ Duration }}, {{ Trainer }}"
+  - name: printing the course info
+    ansible.builtin.debug
+      msg: "Course Name is: {{ course }}, Duration: {{ duration }}, Trainer: {{ trainer }}"
