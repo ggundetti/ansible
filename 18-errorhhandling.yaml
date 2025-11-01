@@ -1,16 +1,17 @@
 - name: error handling
   hosts: local
   connections: local
+  become: yes
   tasks:
   - name: check user id or not
     ansible.builtin.command: id gopal
     register: user_output
     ignore_errors: true
 
-  - name: print the user_output
+  - name: print the output
     ansible.builtin.debug:
-      msg: "{{ "user_output" }}"
-      
+      msg: "{{ user_output }}"
+
   - name: create user
     ansible.builtin.command: useradd gopal
     when: user_output.rc != 0
