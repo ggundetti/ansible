@@ -1,0 +1,9 @@
+- name: split functions
+  hosts: local
+  connection: local
+  vars:
+    technologies: DevOps, Ansible, teraaform, shell
+  tasks:
+  - name: slipting function
+    ansible.builtin.debug:
+      msg: "The current Technologies are: {{ technologies | split(',') }}"
