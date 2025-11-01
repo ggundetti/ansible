@@ -4,4 +4,4 @@
   tasks:
   - name: print function
     ansible.builtin.debug:
-      msg: "Hellow {{ name | default("Ramesh") }}"
+      msg: "Hellow {{ name | default('Ramesh') }}"
