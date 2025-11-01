@@ -1,6 +1,6 @@
 - name: conditions with play
   hosts: local
-  connections: local
+  connection: local
   vars:
     number: 6
   tasks:
