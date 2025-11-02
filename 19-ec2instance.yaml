@@ -1,7 +1,7 @@
 - name: create ec2 instance
   hosts: local
   connection: local
-  become: yes
+  # become: yes
   vars:
     ami_id: ami-09c813fb71547fc4f
     sg_id: sg-047ef728b9f81c7e7
@@ -25,4 +25,3 @@
   - name: print the ec2 out put
     ansible.builtin.debug:
       msg: "{{ ec2_output }}"
-      
