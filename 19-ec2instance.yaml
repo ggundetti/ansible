@@ -14,8 +14,8 @@
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       instance_type: t3.micro
-      security_group: "{{ sg-047ef728b9f81c7e7 }}"
-      image_id: "{{ ami-09c813fb71547fc4f }}"
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
       tags:
         name: "{{ item }}"
     loop: "{{ instances }}"
