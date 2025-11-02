@@ -4,7 +4,7 @@
   become: yes
   vars:
     ami_id: ami-09c813fb71547fc4f
-    sg_ig: sg-047ef728b9f81c7e7
+    sg_id: sg-047ef728b9f81c7e7
     zone_id: use1-az1
     domain_name: dopsaws.fun
     instances:
