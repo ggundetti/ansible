@@ -9,22 +9,18 @@
     domain_name: dopsaws.fun
     instances:
     - mongodb
-    - redis
-    - mysql
-    - rabbitmq
-    tasks:
-    - name: start an instance with a public IP address
-      amazon.aws.ec2_instance:
+  tasks:
+  - name: launching ec2 instance
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      instance_type: t3.micro
+      security_group: "{{ sg-047ef728b9f81c7e7 }}"
+      image_id: "{{ ami-09c813fb71547fc4f }}"
+      tags:
         name: "{{ item }}"
-        instance_type: t3.micro
-        security_group: "{{ sg_id }}"
-        image_id: "{{ ami_id }}"
-        tags:
-          name: "{{ item }}"
+    loop: "{{ instances }}"
+    register: ec2_output
 
-      loop: "{{ instances }}"
-      register: ec2_output
-      overwrite: true
-    - name: ec2 output
-      ansible.builtin.debug:
-        msg: "{{ ec2_output }}"
+  - name: print the ec2 out put
+    ansible.builtin.debug:
+      msg: "{{ ec2_output }}"
