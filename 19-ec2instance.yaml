@@ -1,4 +1,4 @@
-- nameE: create ec2 instance
+- name: create ec2 instance
   hosts: local
   connection: local
   vars:
