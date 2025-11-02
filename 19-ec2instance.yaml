@@ -9,6 +9,9 @@
     domain_name: dopsaws.fun
     instances:
     - mongodb
+    - redis
+    - mysql
+    - rabbitmq
     tasks:
     - name: start an instance with a public IP address
       amazon.aws.ec2_instance:
